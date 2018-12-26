@@ -1,0 +1,34 @@
+---
+label: Homepage Block
+hide_body: false
+is_partial: true
+display_field: title
+fields:
+- type: text
+  name: title
+  label: Title
+  description: The title of the block
+  config:
+    required: false
+- type: textarea
+  name: intro
+  label: Intro
+  description: Introduction of the block
+  config:
+    wysiwyg: false
+    schema:
+      format: markdown
+- type: textarea
+  name: text
+  label: Text
+  description: Text of the block
+- type: boolean
+  default: false
+  label: Toggle button
+  name: toggle_button
+  description: Show or hide the button
+- type: text
+  name: value_of_the_button
+  label: Value of the button
+  config:
+    required: true

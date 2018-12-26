@@ -1,58 +1,40 @@
 ---
-layout: base 
+layout: base
 permalink: "./index.html"
-# Block 1
-title_block_1: "Digital Compositing"
-Intro_block_1: "Passionné par ces trois domaines, je recheche un travail qui me permettrait Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat non felis condimentum consequat."
-Text_block_1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus voluptate!"
-Button_bloc_1: "See More"
----
-<ul class="blockContainer">
-    <li class="block">
-        <div class="blockImg">
-        </div>
-        <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
-        <div class="blockContent">
-            <h3>{{page.title_block_1}}</h3>
-            <p class="introText">{{page.Intro_block_1}}</p>
-            <p class="mainText">{{page.Text_block_1}}</p>
-            <a class="button_link" href="#">{{page.Button_bloc_1}}</a>
-        </div>
-    </li>
 
+
+title: Robin Daloze
+introdution: 'Introduction'
+texte: Awesome Texte
+
+block:
+- template: homepage-block
+  toggle_button: true
+  value_of_the_button: Want to see more ?
+  title: Digital Compositing
+  intro: Passionné par ces trois domaines, je recheche un travail qui me permettrait
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat
+    non felis condimentum consequat.
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus
+    similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam
+    laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus
+    voluptate!
+
+---
+
+
+{% for item in page.block %}
+    {% if forloop.first %}<ul class="blockContainer">{% endif %}
     <li class="block">
         <div class="blockImg">
         </div>
         <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
         <div class="blockContent">
-            <h3>Digital Compositing</h3>
-            <p class="introText">Passionné par ces trois domaines, je recheche un travail qui me permettrait Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat non felis condimentum consequat. </p>
-            <p class="mainText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus voluptate!</p>
-            <p class="mainText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam enim, consequatur veritatis sit earum fugiat nisi minus voluptatum. Dicta unde officia eaque, dolores reiciendis inventore consequatur explicabo similique quaerat harum.</p>
-            <a class="button_link" href="#">See More...</a>
+            <h3>{{item.title}}</h3>
+            <p class="introText">{{item.intro}}</p>
+            <p class="mainText">{{item.text}}</p>
+            <a class="button_link" href="#">{{item.value_of_the_button}}</a>
         </div>
     </li>
-    <li class="block">
-        <div class="blockImg">
-        </div>
-        <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
-        <div class="blockContent">
-            <h3>Digital Compositing</h3>
-            <p class="introText">Passionné par ces trois domaines, je recheche un travail qui me permettrait Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
-            <p class="mainText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus voluptate!</p>
-            <p class="mainText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam enim, consequatur veritatis sit earum fugiat nisi minus voluptatum. Dicta unde officia eaque, dolores reiciendis inventore consequatur explicabo similique quaerat harum.</p>
-            <a class="button_link" href="#">See More...</a>
-        </div>
-    </li>
-</ul>
-<script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
+    {% if forloop.last %}</ul>{% endif %}
+{% endfor %}

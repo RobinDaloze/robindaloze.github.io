@@ -1,0 +1,30 @@
+---
+label: Homepage
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Title of the homepage
+  config:
+    required: true
+- type: textarea
+  description: Introduction of the Homepage
+  label: Introdution
+  name: introdution
+  hidden: false
+  config:
+    required: false
+- type: textarea
+  name: texte
+  label: Texte
+  description: Texte of the homepage
+- type: blocks
+  template_types:
+  - homepage-block
+  label: Block
+  name: block
+  description: Create your blocks of the Homepage
+pages:
+- _pages/index.html

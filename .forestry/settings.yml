@@ -4,20 +4,22 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: heading
-  label: test
 - type: document
-  path: Homepage
-  label: _pages/index.html
+  path: _data/mainnav.yml
+  label: Menu
 - type: jekyll-pages
-  label: _pages
+  label: Test
   create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
-  new_doc_ext: html
+  templates:
+  - this-is-a-page
+- type: document
+  path: _pages/index.html
+  label: Homepage
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
+build:
+  preview_command: npm run build
+  output_directory: _site
