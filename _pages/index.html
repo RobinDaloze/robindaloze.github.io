@@ -1,12 +1,9 @@
 ---
 layout: base
 permalink: "./index.html"
-
-
 title: Robin Daloze
-introdution: 'Introduction'
+introdution: Introduction
 texte: Awesome Texte
-
 block:
 - template: homepage-block
   toggle_button: true
@@ -19,10 +16,30 @@ block:
     similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam
     laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus
     voluptate!
+- template: homepage-block
+  title: 3D Generalist
+  intro: Passionné par ces trois domaines, je recheche un travail qui me permettrait
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat
+    non felis condimentum consequat.
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus
+    similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam
+    laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus
+    voluptate!
+  toggle_button: true
+  value_of_the_button: See more
+- template: homepage-block
+  title: Programing
+  intro: Passionné par ces trois domaines, je recheche un travail qui me permettrait
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat
+    non felis condimentum consequat.
+  text: Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus
+    similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam
+    laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus
+    voluptate!
+  toggle_button: true
+  value_of_the_button: See more
 
 ---
-
-
 {% for item in page.block %}
     {% if forloop.first %}<ul class="blockContainer">{% endif %}
     <li class="block">
