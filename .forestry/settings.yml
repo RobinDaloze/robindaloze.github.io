@@ -7,7 +7,6 @@ sections:
 - type: document
   path: _data/mainnav.yml
   label: Menu
-  match: "**/*"
 - type: jekyll-pages
   label: Test
   create: all
