@@ -7,11 +7,6 @@ sections:
 - type: document
   path: _data/mainnav.yml
   label: Menu
-- type: jekyll-pages
-  label: Test
-  create: all
-  templates:
-  - this-is-a-page
 - type: document
   path: _pages/index.html
   label: Homepage
