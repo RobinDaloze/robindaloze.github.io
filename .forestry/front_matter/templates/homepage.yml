@@ -26,3 +26,5 @@ fields:
   label: Block
   name: block
   description: Create your blocks of the Homepage
+pages:
+- _pages/index.html
