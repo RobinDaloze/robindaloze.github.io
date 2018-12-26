@@ -1,15 +1,21 @@
 ---
 new_page_extension: md
 auto_deploy: false
-admin_path: 
+admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: test
+- type: document
+  path: Homepage
+  label: _pages/index.html
 - type: jekyll-pages
   label: _pages
   create: all
 - type: jekyll-posts
   label: Posts
   create: all
+  new_doc_ext: html
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
