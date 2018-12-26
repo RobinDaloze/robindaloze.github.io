@@ -13,7 +13,7 @@ sections:
   create: documents
   match: "**/*"
   templates:
-  - this-is-a-page
+  - homepage
 - type: document
   path: test.md
   label: test
