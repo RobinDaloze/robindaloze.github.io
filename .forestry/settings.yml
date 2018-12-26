@@ -4,11 +4,12 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: test.md
+  label: test
+  match: "**/*"
 - type: heading
   label: test
-- type: document
-  path: "../_pages/index.html"
-  label: Homepage
 - type: jekyll-pages
   label: Pages
   create: all
