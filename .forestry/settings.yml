@@ -7,7 +7,7 @@ sections:
 - type: heading
   label: test
 - type: document
-  path: _pages/index.html
+  path: "../_pages/index.html"
   label: Homepage
 - type: jekyll-pages
   label: Pages
