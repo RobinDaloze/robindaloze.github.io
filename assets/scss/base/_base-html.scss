@@ -1,0 +1,17 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+
+
+// ------------------------
+// CSS
+// ------------------------
+
+
+
+html
+{
+    font:400 1rem/1 $fontstack-main;
+}

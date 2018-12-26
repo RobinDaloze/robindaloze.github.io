@@ -1,0 +1,30 @@
+{
+  "name": "robindaloze",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:css-expanded": "node-sass --output-style=expanded assets/scss/main.scss _site/css/main.css",
+    "build:css-compressed": "node-sass --output-style=compressed assets/scss/main.scss | postcss -u autoprefixer --no-map --output _site/css/main-min.css",
+    "build:css": "npm-run-all build:css-compressed build:css-expanded",
+    "watch:css": "onchange assets/scss/**/* -- npm run build:css",
+    "build:jekyll": "jekyll build",
+    "watch:jekyll": "onchange \"_data/**/*\" \"_includes/**/*\" \"_layouts/**/*\" \"_pages/**/*\" \"_config.yml\" -- jekyll build",
+    "serve": "browser-sync start --server _site/ --file _site",
+    "build": "npm-run-all --serial build:jekyll build:css",
+    "watch": "npm-run-all --parallel serve watch:**"
+  },
+  "author": "Robin Daloze",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^9.4.3",
+    "browser-sync": "^2.26.3",
+    "glob": "^7.1.3",
+    "imagemin-cli": "^4.0.0",
+    "node-sass": "^4.11.0",
+    "npm-run-all": "^4.1.5",
+    "onchange": "^5.2.0",
+    "postcss-cli": "^6.1.0"
+  }
+}

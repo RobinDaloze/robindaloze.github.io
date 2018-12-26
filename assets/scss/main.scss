@@ -1,0 +1,27 @@
+
+// UTILS
+@import "utils/_utils-fonts.scss";
+
+// SETTINGS
+@import "settings/_settings-color.scss";
+@import "settings/_settings-typography.scss";
+
+//FUNCTIONS
+@import "functions/_function-pxtorem.scss";
+
+//mixins
+
+
+
+// BASE
+@import "base/_base-body.scss";
+@import "base/_base-html.scss";
+@import "base/_base-typography.scss";
+
+// COMPONENTS
+@import "components/_components-button.scss";
+@import "components/_components-block.scss";
+@import "components/_components-footer.scss";
+
+
+

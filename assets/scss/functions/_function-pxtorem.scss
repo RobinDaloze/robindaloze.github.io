@@ -1,0 +1,23 @@
+// --------------------
+// pixels to rem
+// --------------------
+
+/**
+* -check that px are passed to the function
+* - divide the px by 16 and multiply by 1rem
+**/ 
+
+@function pxtorem($value)
+{
+    @if($value == 0)
+    {
+        @return 0;
+    } @else if(unit($value)=="px")
+    {
+        @return ($value/16px)*1rem;
+    } @else
+    {
+        @error "Value passed to pxtorem() shoud be specified in px";
+    }
+    
+}

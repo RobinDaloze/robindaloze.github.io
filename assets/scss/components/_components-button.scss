@@ -1,0 +1,27 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+
+
+
+// -------------------------
+//  BUTTON
+// -------------------------
+.button_link{
+    text-decoration: none;
+    color: $color-accent1;
+    font: 500 1rem/1 $fontstack-secondary;
+    text-transform: uppercase;
+    padding: 9px 18px;
+    box-sizing: content-box;
+    border: 1px solid $color-accent1;
+    border-radius: 3px;
+    transition: all .2s ease;
+}
+.button_link:hover{
+    color: white;
+    background-color: $color-accent1;
+
+}

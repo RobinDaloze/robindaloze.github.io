@@ -1,0 +1,49 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+
+$color-grey1: #1A1412 !default;
+$color-grey2: #312C2A !default;
+$color-grey3: #484341 !default;
+$color-grey4: #5F5B59 !default;
+$color-grey5: #767271 !default;
+$color-grey6: #8C8988 !default;
+$color-grey7: #A3A1A0 !default;
+$color-grey8: #BAB9B8 !default;
+$color-grey9: #D1D0D0  !default;
+$color-grey10: #F4F3F3 !default;
+
+$color-accent1: #DB5834 !default;
+
+h3
+{
+    font:800 pxtorem(30px) $fontstack-secondary;
+    line-height:pxtorem(36px);
+    text-transform: uppercase;
+    margin: pxtorem(24px) 0;
+    padding: 0;
+}
+.introText
+{
+    font:500 pxtorem(16px) $fontstack-main;
+    line-height:pxtorem(24px);
+    margin: pxtorem(24px) 0;
+    padding: 0;
+    color: #666666;
+}
+.mainText
+{
+    font:400 pxtorem(16px) $fontstack-main;
+    line-height:pxtorem(24px);
+    margin: pxtorem(18px) 0;
+    padding: 0;
+}
+h4
+{
+    font:800 pxtorem(24px) $fontstack-secondary;
+    line-height:pxtorem(24px);
+    margin: pxtorem(24px) 0;
+    padding: 0;
+}

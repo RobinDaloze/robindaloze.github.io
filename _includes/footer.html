@@ -1,0 +1,45 @@
+<div class="footer">
+    <div class="footerShowreel">
+        <h4>Showreel</h4>
+        <p class="footerText mainText">You can contact me to have the full showreel</p>
+        <video width="280" height="158" autoplay loop>
+                <source src="../assets/video/VFX Breakdown.webm" type="video/webm">
+                <source src="../assets/video/VFX Breakdown.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+              </video>
+    </div>
+    <div class="footerContact">
+        <h4>Contact</h4>
+        <p class="footerText mainText">You can contact me with</p>
+        <ul class="footerContent__list">
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">
+                LikedIn
+            </a></li>
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">
+                robin.daloze@gmail.com
+            </a></li>
+        </ul>
+    </div>
+    <div class="footerNav">
+        <h4>Navigation</h4>
+        {% for item in site.data.mainnav %}
+            {% if forloop.first %}<ul class="footerContent__list">{% endif %}
+            <li class="footerContent__item">
+                <a class="footerContent__list mainText" href="{{item.url}}">{{item.label}}</a>
+                
+            </li>
+            {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+    </div>
+    <div class="footerSocial">
+        <h4>Social Media</h4>
+        <ul class="footerContent__list">
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">Linked In</a></li>
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">Mail</a></li>
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">Facebook</a></li>
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">IMDB</a></li>
+        </ul>
+    </div>
+    
+
+</div>

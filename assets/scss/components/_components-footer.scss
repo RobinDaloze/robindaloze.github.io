@@ -1,0 +1,59 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+$color-grey8: #BAB9B8 !default;
+$size-spacing: 300px;
+
+
+// ------------------------
+//  FOOTER
+// ------------------------
+
+.footer
+{
+    width: 100%;
+    padding: 120px 0;
+    background-color: $color-grey1;
+    display: grid;
+    grid-template-columns: 1fr repeat(12, 80px) 1fr;
+    grid-column-gap: 20px;
+    align-content: stretch;
+    justify-content: stretch;
+}
+.footerShowreel
+{
+    grid-area: 1 / 2/ 1/span 3;
+}
+.footerContact
+{
+    grid-area: 1 / 6 / 1 /  span 2;
+}
+.footerNav
+{
+    grid-area: 1 / 9 / 1/ span 2;
+}
+.footerSocial
+{
+    grid-area: 1 / 12 / 1 /  span 2;
+}
+.footer h4
+{
+    color: white;
+}
+.footerContent__list
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.footerText, .footerContent__list
+{
+    text-decoration: none;
+    color: $color-grey8;
+    line-height: pxtorem(24px);
+    margin: 6px 0;
+}

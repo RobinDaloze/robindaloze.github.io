@@ -1,0 +1,85 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+$size-spacing: 300px;
+
+
+// -------------------------
+// Blocks
+// -------------------------
+.blockContainer
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.block
+{
+    display: grid;
+    grid-template-columns: 1fr repeat(12, 80px) 1fr;
+    grid-template-rows: $size-spacing auto $size-spacing;
+    grid-column-gap: 20px;
+    align-content: stretch;
+    justify-content: stretch;
+    //margin-top: 300px;
+    margin-bottom: -$size-spacing;
+}
+.blockImg, .blockContent
+{
+    padding: 36px 0;
+    box-sizing:border-box;
+}
+.blockImg
+{
+    grid-area: 2 / 1 / 3 / 8 ;
+    background: url("../assets/img/svg/triangle-bl.svg") left top no-repeat,
+                url("../assets/img/svg/block.svg") left center no-repeat,
+                url("../assets/img/svg/triangle-lt.svg") left bottom no-repeat;
+    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2}), 100% $size-spacing;
+    position: relative;
+    filter: drop-shadow(6px 6px 2px rgba(0,0,0,0.25));
+    height: calc(100% + #{$size-spacing*2});
+    transform: translateY(-$size-spacing);
+
+
+
+}
+.blockContent
+{
+    grid-area: 2 / 9 / 2 / 14 ;
+}
+.blockImg__link
+{
+    grid-area: 2 / 2 / 3 / 7 ;
+    z-index: 10;
+}
+.blockImg__img
+{
+    max-width: 100%;
+}
+
+.block:nth-child(2n) .blockImg
+{
+    grid-area: 2/ 8 / 3 / 15 ;
+    background: url("../assets/img/svg/triangle-rb.svg") right top no-repeat,
+                url("../assets/img/svg/block.svg") left center no-repeat,
+                url("../assets/img/svg/triangle-tr.svg") right bottom no-repeat;
+    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2}), 100% $size-spacing;
+}
+.block:nth-child(2n) .blockContent
+{
+    grid-area: 2 / 2 / 3 / 7 ;
+}
+.block:nth-child(2n) .blockImg__link
+{
+    grid-area: 2 / 9 / 3 / 14 ;
+}
+.block:last-child
+{
+    margin-bottom: 0;
+}
