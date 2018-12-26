@@ -1,0 +1,11 @@
+---
+label: Homepage
+hide_body: true
+is_partial: false
+fields:
+- type: blocks
+  template_types:
+  - homepage-block
+  label: Block
+  name: block
+  description: Create your block of the Homepage
