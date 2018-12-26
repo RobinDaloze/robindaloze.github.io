@@ -4,10 +4,12 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: document
+  path: _data/mainnav.yml
+  label: Menu
 - type: jekyll-pages
   label: Test
   create: all
-  match: "**/*"
   templates:
   - this-is-a-page
 - type: document
