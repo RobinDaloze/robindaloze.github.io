@@ -7,7 +7,6 @@ sections:
 - type: document
   path: test.md
   label: test
-  match: "**/*"
 - type: heading
   label: test
 - type: jekyll-pages
