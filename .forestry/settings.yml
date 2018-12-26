@@ -9,13 +9,6 @@ sections:
 - type: document
   path: _pages/index.html
   label: Homepage
-- type: jekyll-pages
-  label: _pages
-  create: all
-- type: jekyll-posts
-  label: Posts
-  create: all
-  new_doc_ext: html
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
