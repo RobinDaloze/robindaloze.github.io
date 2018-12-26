@@ -1,0 +1,10 @@
+---
+label: Homepage
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  label: Block 1 Title
+  name: block_1_title
+  config:
+    required: false
