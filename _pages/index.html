@@ -1,8 +1,11 @@
 ---
 layout: base 
 permalink: "./index.html"
-
+# Block 1
 title_block_1: "Digital Compositing"
+Intro_block_1: "Passionné par ces trois domaines, je recheche un travail qui me permettrait Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat non felis condimentum consequat."
+Text_block_1: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus voluptate!"
+Button_bloc_1: "See More"
 ---
 <ul class="blockContainer">
     <li class="block">
@@ -10,11 +13,10 @@ title_block_1: "Digital Compositing"
         </div>
         <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
         <div class="blockContent">
-            <h3>Digital Compositing</h3>
-            <p class="introText">Passionné par ces trois domaines, je recheche un travail qui me permettrait Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas dignissim erat non felis condimentum consequat. </p>
-            <p class="mainText">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, necessitatibus similique. Exercitationem, eligendi officia iure fugiat nemo nobis laboriosam laudantium, mollitia suscipit ipsa libero obcaecati tenetur odio voluptatum, minus voluptate!</p>
-            <p class="mainText">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laboriosam enim, consequatur veritatis sit earum fugiat nisi minus voluptatum. Dicta unde officia eaque, dolores reiciendis inventore consequatur explicabo similique quaerat harum.</p>
-            <a class="button_link" href="#">See More...</a>
+            <h3>{{page.title_block_1}}</h3>
+            <p class="introText">{{page.Intro_block_1}}</p>
+            <p class="mainText">{{page.Text_block_1}}</p>
+            <a class="button_link" href="#">{{page.Button_bloc_1}}</a>
         </div>
     </li>
 
