@@ -16,3 +16,5 @@ fields:
   config:
     required: true
     display_utc: true
+pages:
+- test.md
