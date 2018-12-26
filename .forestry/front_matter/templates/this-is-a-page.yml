@@ -1,0 +1,18 @@
+---
+label: This is a page
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  name: ma_variable
+  label: Ma variable
+  description: Need Helps ?
+  config:
+    required: true
+- type: datetime
+  name: and_a_second_fields
+  label: And a second fields
+  description: Desc
+  config:
+    required: true
+    display_utc: true
