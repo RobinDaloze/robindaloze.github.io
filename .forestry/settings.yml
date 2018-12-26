@@ -4,6 +4,8 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: test
 - type: document
   path: Homepage
   label: _pages/index.html
@@ -13,7 +15,7 @@ sections:
 - type: jekyll-posts
   label: Posts
   create: all
-  new_doc_ext: ".html"
+  new_doc_ext: html
 upload_dir: uploads
 public_path: "/uploads"
 front_matter_path: ''
