@@ -17,6 +17,14 @@ $color-grey10: #F4F3F3 !default;
 
 $color-accent1: #DB5834 !default;
 
+h2
+{
+    font:800 pxtorem(54px) $fontstack-secondary;
+    line-height:pxtorem(54px);
+    text-transform: uppercase;
+    margin: pxtorem(42px) 0;
+    padding: 0;
+}
 h3
 {
     font:800 pxtorem(30px) $fontstack-secondary;
