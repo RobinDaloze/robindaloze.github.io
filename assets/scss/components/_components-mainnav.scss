@@ -40,3 +40,7 @@ $color-grey8: #BAB9B8 !default;
     margin: 12px;;
 
 }
+.mainnav__link--active
+{
+    color: $color-accent1;
+}

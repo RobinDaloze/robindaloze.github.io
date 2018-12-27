@@ -40,7 +40,7 @@ $size-spacing: 300px;
     background: url("../assets/img/svg/triangle-bl.svg") left top no-repeat,
                 url("../assets/img/svg/block.svg") left center no-repeat,
                 url("../assets/img/svg/triangle-lt.svg") left bottom no-repeat;
-    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2}), 100% $size-spacing;
+    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2-1}), 100% $size-spacing;
     position: relative;
     filter: drop-shadow(6px 6px 2px rgba(0,0,0,0.25));
     height: calc(100% + #{$size-spacing*2});
@@ -69,7 +69,7 @@ $size-spacing: 300px;
     background: url("../assets/img/svg/triangle-rb.svg") right top no-repeat,
                 url("../assets/img/svg/block.svg") left center no-repeat,
                 url("../assets/img/svg/triangle-tr.svg") right bottom no-repeat;
-    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2}), 100% $size-spacing;
+    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2-1}), 100% $size-spacing;
 }
 .block:nth-child(2n) .blockContent
 {

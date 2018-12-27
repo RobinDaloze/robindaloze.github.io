@@ -4,12 +4,37 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
+- type: heading
+  label: Single Page
+- type: document
+  path: _pages/index.html
+  label: Homepage
+- type: document
+  path: _pages/work.html
+  label: Work
+- type: document
+  path: _pages/skills.html
+  label: Skills & XP
+- type: document
+  path: _pages/contact.html
+  label: Contact
+- type: heading
+  label: Includes
+- type: document
+  path: _includes/footer.html
+  label: Footer
+  match: "**/*"
+- type: heading
+  label: Data
 - type: document
   path: _data/mainnav.yml
   label: Menu
 - type: document
-  path: _pages/index.html
-  label: Homepage
+  path: _data/experience.yml
+  label: Experience
+- type: document
+  path: _data/skills.yml
+  label: Skills
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
