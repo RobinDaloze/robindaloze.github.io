@@ -1,0 +1,68 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+$size-spacing: 300px;
+
+
+// -------------------------
+// Blocks
+// -------------------------
+
+.blockImg--skills
+{
+    grid-area: 2 / 1 / 3 / 6;
+}
+.blockContent--skills
+{
+    grid-area: 2 / 7 / 2 / 14;
+}
+.block:nth-child(2n) .blockImg--skills
+{
+    grid-area: 2 / 10 / 3 / 15;
+}
+.block:nth-child(2n) .blockContent--skills
+{
+    grid-area: 2 / 2 / 3 / 9;
+}
+.skills__list
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.skills__title, .skills__function
+{
+    display: inline-block;
+}
+.skills__title
+{
+    width: pxtorem(200px);
+    color: black;
+}
+.skills__title::after
+{
+    content:" :"
+}
+.skills__item
+{
+    border-bottom: 2px solid  $color-grey1;
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+.skills__item::after
+{
+    content:"";
+    background-color: $color-accent1;
+    width: pxtorem(180px);
+    height: pxtorem(6px);
+    bottom: 0;
+    left: 0;
+    position: absolute;
+}

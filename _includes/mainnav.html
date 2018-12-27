@@ -1,0 +1,5 @@
+<ul class="mainnav">
+    {% for item in site.data.mainnav %}
+        <li class="mainnav__item"><a class="mainnav__link" href="{{item.url}}">{{item.label}}</a></li>
+    {% endfor %}
+</ul>

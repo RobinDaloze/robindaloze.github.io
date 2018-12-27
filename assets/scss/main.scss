@@ -1,6 +1,7 @@
 
 // UTILS
 @import "utils/_utils-fonts.scss";
+@import "utils/_utils-skills_value.scss";
 
 // SETTINGS
 @import "settings/_settings-color.scss";
@@ -19,8 +20,10 @@
 @import "base/_base-typography.scss";
 
 // COMPONENTS
+@import "components/_components-mainnav.scss";
 @import "components/_components-button.scss";
 @import "components/_components-block.scss";
+@import "components/_components-blockSkills.scss";
 @import "components/_components-footer.scss";
 
 
