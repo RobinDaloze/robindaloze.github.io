@@ -1,0 +1,58 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-grey1: #1A1412 !default;
+$size-spacing: 300px;
+
+
+// -------------------------
+// header Homepage
+// -------------------------
+
+.headerHomepage
+{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr repeat(12, 80px) 1fr;
+    grid-column-gap: pxtorem(20px);
+    background-color: $color-grey1;
+}
+.headerHomepage__imgblock
+{
+    grid-area: 1 / 6 / 1 / 15;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+.headerHomepage__imgContainer
+{
+    right: 50%;
+    position: relative;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    text-align: center
+}
+.headerHomepage__img
+{
+    max-height: 100%;
+    top:0;
+    left: center;
+    display: inline-block;
+    margin: 0 -100% 0 0;
+}
+.headerHomepage__block
+{
+    background-color: white;
+    padding: pxtorem(90px) pxtorem(100px);
+    grid-area: 1 / 2 / 1 / 9;
+    z-index: 2;
+    border-radius: 3px;
+    transform: translateX(-200px)
+}
