@@ -22,3 +22,5 @@ fields:
     min: '1'
   label: Work asset
   name: work_asset
+pages:
+- _pages/work.html
