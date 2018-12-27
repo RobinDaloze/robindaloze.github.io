@@ -12,14 +12,17 @@ sections:
 - type: document
   path: _pages/work.html
   label: Work
-  match: "**/*"
 - type: document
   path: _pages/skills.html
   label: Skills & XP
-  match: "**/*"
 - type: document
   path: _pages/contact.html
   label: Contact
+- type: heading
+  label: Includes
+- type: document
+  path: _includes/footer.html
+  label: Footer
   match: "**/*"
 - type: heading
   label: Data
@@ -29,11 +32,9 @@ sections:
 - type: document
   path: _data/experience.yml
   label: Experience
-  match: "**/*"
 - type: document
   path: _data/skills.yml
   label: Skills
-  match: "**/*"
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
