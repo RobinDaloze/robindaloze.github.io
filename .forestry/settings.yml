@@ -4,12 +4,14 @@ auto_deploy: false
 admin_path: ''
 webhook_url: 
 sections:
-- type: document
-  path: _data/mainnav.yml
-  label: Menu
+- type: heading
+  label: Single Page
 - type: document
   path: _pages/index.html
   label: Homepage
+- type: document
+  path: _data/mainnav.yml
+  label: Menu
 upload_dir: assets/img
 public_path: "/assets/img"
 front_matter_path: ''
