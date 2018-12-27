@@ -4,6 +4,10 @@ hide_body: false
 is_partial: true
 display_field: title
 fields:
+- type: file
+  label: Image
+  name: image
+  description: Image displayed in the dark area
 - type: text
   name: title
   label: Title
@@ -32,3 +36,7 @@ fields:
   label: Value of the button
   config:
     required: true
+- type: select
+  config:
+    source:
+      type: documents
