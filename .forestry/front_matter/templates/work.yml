@@ -1,0 +1,24 @@
+---
+label: Work
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: title
+  label: Title
+  description: Title of the page
+  hidden: false
+  config:
+    required: false
+  default: Work
+- type: textarea
+  name: description
+  label: Description
+  description: Description of the page
+- type: blocks
+  template_types:
+  - work-asset
+  config:
+    min: '1'
+  label: Work asset
+  name: work_asset
