@@ -16,3 +16,23 @@ description: |-
   There are work on compositing and/or 3D or work on web, like Threejs, nodejs, and much more
 
 ---
+
+<div class="blockContainer">
+    <div class="block">
+        <div class="blockImg">
+        </div>
+        <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
+        <div class="blockContent">
+            <h3>{{page.title}}</h3>
+            <p class="mainText">{{page.description}}</p>
+        </div>
+    </div>
+</div>
+
+{% for item in page.work_asset %}
+    {% for text in item.asset_description %}
+        <h3>{{text.title}}</h3>
+        <p>{{text.description}}</p>
+    {% endfor %}
+    <img src="{{item.asset}}" alt="Oups, asset non disponible">
+{% endfor %}
