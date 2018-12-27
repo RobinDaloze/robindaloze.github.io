@@ -11,8 +11,8 @@ fields:
     required: true
 - type: textarea
   description: Introduction of the Homepage
-  label: Introdution
-  name: introdution
+  label: Introduction
+  name: introduction
   hidden: false
   config:
     required: false

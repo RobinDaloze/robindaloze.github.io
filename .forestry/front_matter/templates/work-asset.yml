@@ -1,0 +1,17 @@
+---
+label: Work asset
+hide_body: false
+is_partial: true
+fields:
+- type: blocks
+  label: Asset Description
+  name: asset_description
+  description: Add a block text above the image
+  config:
+    min: '0'
+    max: '1'
+  template_types:
+  - description-work-asset
+- type: file
+  label: Asset
+  name: asset
