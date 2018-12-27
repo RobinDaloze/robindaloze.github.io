@@ -1,0 +1,13 @@
+---
+label: Skills & XP
+hide_body: true
+is_partial: false
+fields:
+- type: text
+  name: experience_title
+  label: Experience Title
+  description: Title of the first block
+- type: text
+  name: skills_title
+  label: Skills Title
+  description: Title of the second block
