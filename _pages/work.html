@@ -6,7 +6,7 @@ title: Work
 work_asset:
 - template: work-asset
   asset: "/assets/img/Uploads/HeaderHomePage.PNG"
-  asset_description:
+  asset_item:
   - template: description-work-asset
     title: TFE 3ème bac
     description: This work combine many technologies like, in 3D, paint effect, mash,
@@ -38,13 +38,18 @@ description: |-
 {% for item in page.work_asset %}
     {% if forloop.first %}<ul class="workAsset__container">{% endif %}
 
-    {% for text in item.asset_description %}
+    {% for i in item.asset_item %}
+        {% if i.template == "description-work-asset" %}
+        
         <div class="workAsset__textContainer">
-            <h3 class="workAsset__title">{{text.title}}</h3>
-            <p class="workAsset__description">{{text.description}}</p>
+            <h3 class="workAsset__title">{{i.title}}</h3>
+            <p class="workAsset__description">{{i.description}}</p>
         </div>
+        {% endif %}
+        {% if i.template == "image-work-asset" %}
+            <img class="workAsset__img" src="{{i.image}}" alt="Oups, asset non disponible">
+        {% endif %}
     {% endfor %}
-    <img class="workAsset__img" src="{{item.asset}}" alt="Oups, asset non disponible">
     
     {% if forloop.last %}</ul>{% endif %}
     

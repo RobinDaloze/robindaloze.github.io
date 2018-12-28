@@ -6,3 +6,5 @@
   url: "/skills/"
 - label: "Contact"
   url: "/contact/"
+- label: "Canvas"
+  url: "/canvas/"
