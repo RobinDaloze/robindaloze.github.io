@@ -1,0 +1,21 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-grey1: #1A1412 !default;
+
+
+// -------------------------
+// header Homepage
+// -------------------------
+
+.ImageNoise
+{
+    transition: transform 5s cubic-bezier(0,0.76, 0.56,1);
+    cursor: pointer;
+}
+.ImageNoise:hover
+{
+    transform: scale(1.2);
+}
