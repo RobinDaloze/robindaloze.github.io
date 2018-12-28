@@ -5,8 +5,8 @@ is_partial: true
 display_field: asset_description
 fields:
 - type: blocks
-  label: Asset Description
-  name: asset_description
+  label: Asset Item
+  name: asset_item
   description: Add a block text above the image
   config:
     min: '0'
