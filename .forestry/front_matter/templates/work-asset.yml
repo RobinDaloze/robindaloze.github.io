@@ -11,5 +11,5 @@ fields:
     min: ''
     max: ''
   template_types:
-  - image-work-asset
   - description-work-asset
+  - image-work-asset
