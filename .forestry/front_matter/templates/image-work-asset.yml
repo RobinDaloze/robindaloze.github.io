@@ -1,0 +1,9 @@
+---
+label: Image work Asset
+hide_body: false
+is_partial: true
+fields:
+- type: file
+  name: image
+  label: Image
+  description: Image Asset
