@@ -19,7 +19,7 @@ fields:
   template_types:
   - work-asset
   config:
-    min: '1'
+    min: ''
   label: Work asset
   name: work_asset
 pages:
