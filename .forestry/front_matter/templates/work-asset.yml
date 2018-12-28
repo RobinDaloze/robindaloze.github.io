@@ -2,6 +2,7 @@
 label: Work asset
 hide_body: false
 is_partial: true
+display_field: asset_description
 fields:
 - type: blocks
   label: Asset Description
@@ -9,9 +10,7 @@ fields:
   description: Add a block text above the image
   config:
     min: '0'
-    max: '1'
+    max: '10'
   template_types:
   - description-work-asset
-- type: file
-  label: Asset
-  name: asset
+  - image-work-asset
