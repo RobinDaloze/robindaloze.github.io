@@ -9,8 +9,8 @@ fields:
   name: asset_description
   description: Add a block text above the image
   config:
-    min: ''
-    max: ''
+    min: '0'
+    max: '10'
   template_types:
   - description-work-asset
   - image-work-asset
