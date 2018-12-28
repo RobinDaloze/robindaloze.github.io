@@ -30,9 +30,16 @@ description: |-
 </div>
 
 {% for item in page.work_asset %}
+    {% if forloop.first %}<ul class="workAsset__container">{% endif %}
+
     {% for text in item.asset_description %}
-        <h3>{{text.title}}</h3>
-        <p>{{text.description}}</p>
+        <div class="workAsset__textContainer">
+            <h3 class="workAsset__title">{{text.title}}</h3>
+            <p class="workAsset__description">{{text.description}}</p>
+        </div>
     {% endfor %}
-    <img src="{{item.asset}}" alt="Oups, asset non disponible">
+    <img class="workAsset__img" src="{{item.asset}}" alt="Oups, asset non disponible">
+    
+    {% if forloop.last %}</ul>{% endif %}
+    
 {% endfor %}
