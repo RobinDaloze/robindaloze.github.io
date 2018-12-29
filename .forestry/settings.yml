@@ -23,7 +23,6 @@ sections:
 - type: document
   path: _blog
   label: blog
-  match: "**/*"
 - type: heading
   label: Includes
 - type: document
