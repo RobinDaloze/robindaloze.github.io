@@ -13,6 +13,7 @@ module.exports = {
     var over = false;
     var timeOffset = 0.005;
     var time = 0;
+    var src = canvas.getAttribute("image");
     function draw() {
       var SMOOTHNESS = 15,
         INTENSITY = 9,
@@ -103,6 +104,9 @@ module.exports = {
         ctx.scale(1.06, 1.06);
         ctx.translate(-canvas.width * 0.5, -canvas.height * 0.5);
         ctx.clip(path);
+        ctx.translate(canvas.width * 0.5, canvas.height * 0.5);
+        ctx.rotate(Math.PI);
+        ctx.translate(-canvas.width * 0.5, -canvas.height * 0.5);
         ctx.drawImage(img, 0, 0, 500, 500);
 
         ctx.restore();
@@ -130,7 +134,7 @@ module.exports = {
         window.requestAnimationFrame(draw);
       };
       // Specify the src to load the image
-      img.src = "../assets/img/Uploads/HeaderHomePage.png";
+      img.src = src;
     }
     init();
   }
