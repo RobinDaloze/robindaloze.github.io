@@ -25,6 +25,8 @@ sections:
   label: Blog
   create: documents
   match: "**/*"
+  templates:
+  - blogpost
 - type: heading
   label: Includes
 - type: document
