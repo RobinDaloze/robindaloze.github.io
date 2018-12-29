@@ -29,6 +29,26 @@ $size-spacing: 300px;
     //margin-top: 300px;
     margin-bottom: -$size-spacing;
 }
+.block:first-child:before {
+    content: "";
+    height: 300px;
+    grid-column: 8/15;
+    background-image: url(/assets/img/svg/triangle-tr.svg);
+    filter: drop-shadow(6px 6px 2px rgba(0,0,0,0.25));
+}
+.block:last-child:after {
+    content: "";
+    height: 300px;
+    grid-column: 8/15;
+    grid-row: 3/4;
+}
+.block:nth-child(2n).block:last-child:after  {
+    grid-column: 1/7;
+    background-image: url(/assets/img/svg/triangle-bl.svg);
+}
+.block:nth-child(2n+1).block:last-child:after {
+    background-image: url(/assets/img/svg/triangle-rb.svg);
+}
 .blockImg, .blockContent
 {
     padding: 36px 0;

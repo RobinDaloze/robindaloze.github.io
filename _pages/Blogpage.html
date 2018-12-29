@@ -1,0 +1,17 @@
+---
+layout: base 
+permalink: "./blog/index.html"
+pageName: Blog
+---
+
+{% assign allBlogposts = site.blog | sort: 'date' %}
+{% for item in allBlogposts %}
+    {% if foorloop.first %}<ul>{% endif %}
+        <li><a href="{{item.url}}">
+            <h3>{{ item.title }}</h3>
+            <p>{{item.summary}}</p>
+        </a></li>
+    {% if foorloop.last %}</ul>{% endif %}
+    
+{% endfor %}
+

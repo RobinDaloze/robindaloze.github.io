@@ -35,3 +35,18 @@ exclude:
 keep_files:
   - css
   - js/dist.js
+  - assets/img/Uploads
+
+
+#Collections
+collections:
+  blog:
+    output: true
+    
+#default
+defaults:
+  - scope:
+     type: blog
+    values:
+      layout: blogpost
+      permalink: blogpost/:title/
