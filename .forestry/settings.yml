@@ -19,6 +19,12 @@ sections:
   path: _pages/contact.html
   label: Contact
 - type: heading
+  label: Blog
+- type: document
+  path: _blog
+  label: blog
+  match: "**/*"
+- type: heading
   label: Includes
 - type: document
   path: _includes/footer.html
