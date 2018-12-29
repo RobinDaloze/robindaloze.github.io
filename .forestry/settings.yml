@@ -23,6 +23,12 @@ sections:
 - type: document
   path: _blog
   label: blog
+- type: jekyll-posts
+  label: dfdf
+  create: documents
+  match: "**/*"
+  templates:
+  - work
 - type: heading
   label: Includes
 - type: document
