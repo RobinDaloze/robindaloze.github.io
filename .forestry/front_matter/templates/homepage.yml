@@ -20,6 +20,9 @@ fields:
   name: texte
   label: Texte
   description: Texte of the homepage
+- type: file
+  name: image_header
+  label: Image Header
 - type: blocks
   template_types:
   - homepage-block
