@@ -36,7 +36,3 @@ fields:
   label: Value of the button
   config:
     required: true
-- type: select
-  config:
-    source:
-      type: documents
