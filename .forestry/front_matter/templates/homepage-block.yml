@@ -7,7 +7,7 @@ fields:
 - type: file
   label: Image
   name: image
-  description: Image displayed in the dark area
+  description: 'Image displayed in the dark area. Choose a 1X1 Image. '
 - type: text
   name: title
   label: Title
