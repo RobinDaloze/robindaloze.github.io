@@ -1,0 +1,23 @@
+---
+label: Blogpost
+hide_body: false
+is_partial: false
+fields:
+- type: datetime
+  name: date
+  label: Date
+  config:
+    required: true
+- type: text
+  name: title
+  label: Title
+  config:
+    required: true
+- type: textarea
+  name: summary
+  label: Summary
+  config:
+    required: true
+    wysiwyg: true
+    schema:
+      format: markdown
