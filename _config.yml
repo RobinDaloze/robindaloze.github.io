@@ -26,6 +26,7 @@ exclude:
   - package-lock.json
   - package.json
   - assets/scss
+  - assets/img/Uploads
   - node_modules
   - node_scripts
   - _script
