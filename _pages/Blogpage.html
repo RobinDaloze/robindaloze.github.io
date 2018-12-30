@@ -6,12 +6,14 @@ pageName: Blog
 
 {% assign allBlogposts = site.blog | sort: 'date' %}
 {% for item in allBlogposts %}
-    {% if foorloop.first %}<ul>{% endif %}
-        <li><a href="{{item.url}}">
-            <h3>{{ item.title }}</h3>
-            <p>{{item.summary}}</p>
-        </a></li>
-    {% if foorloop.last %}</ul>{% endif %}
+    {% if forloop.first %}<ul class="blogList">{% endif %}
+        <li class="blogList__item">
+            <h5 class="blogList__date">{{item.date | date:"%m/%d/%Y" }}</h5>
+            <a class="blogList__title" href="{{item.url}}"><h3>{{ item.title }}</h3></a>
+            <p class="blogList__summary">{{item.summary}}</p>
+            <a class="blogList__readmore" href="{{item.url}}">Lire la suite →</a>
+        </li>
+    {% if forloop.last %}</ul>{% endif %}
     
 {% endfor %}
 

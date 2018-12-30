@@ -1,0 +1,52 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+
+
+// -------------------------
+// Blog
+// -------------------------
+
+.blogList
+{
+    width: pxtorem(1180px);
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+}
+.blogList__item
+{
+
+    width: 100%;
+    grid-column: 4/10;
+    display: grid;
+    grid-template-columns: repeat(12, 80px);
+    grid-column-gap:20px;
+    align-items: baseline;
+    margin: 3rem 0;
+}
+.blogList__date
+{
+    grid-column: 1/span 2;
+    color: $color-accent1;
+    font-size: pxtorem(16px);
+    margin: 0;
+}
+.blogList__title
+{
+    grid-column: 3 / span 5;
+    text-decoration: none;
+    color: black;
+}
+.blogList__summary {
+    grid-column: 3 / span 10;
+}
+.blogList__readmore {
+    grid-column: 3 / span 2;
+    color: $color-accent1;
+    text-decoration: none;
+}

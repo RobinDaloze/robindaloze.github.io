@@ -2,8 +2,9 @@
 layout: base
 pageName: Blog
 ---
-
-<h4>{{page.date}}</h4>
-<h3>{{page.title}}</h3>
-<p>{{page.summary}}</p>
-{{content}}
+<div class="blogpost">
+    <h5 class="blogpost__date">{{page.date | date:"%m/%d/%Y" }}</h5>
+    <h3>{{page.title}}</h3>
+    <p>{{page.summary}}</p>
+    {{content}}
+</div>

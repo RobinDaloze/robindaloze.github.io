@@ -1,0 +1,33 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+
+
+/*-------------------------
+-- BLOGPOST
+---------------------------*/
+.blogpost
+{
+    width: pxtorem(780px);
+    margin: pxtorem(60px) auto;
+    position: relative;
+}
+.blogpost p
+{
+    font:400 pxtorem(16px) $fontstack-main;
+    line-height:pxtorem(24px);
+    margin: pxtorem(18px) 0;
+    padding: 0;
+}
+.blogpost__date
+{
+    font-size: pxtorem(16px);
+    margin: 0;
+    color: $color-accent1;
+    position: absolute;
+    left: -200px;
+}
