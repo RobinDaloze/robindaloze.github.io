@@ -1,8 +1,9 @@
 ---
-date: 2018-12-30 23:00:00 +0000
-title: Un troisième blogpost
+date: 2018-12-30 21:00:00 +0000
+title: Un troisieme blogpost
 summary: La déception. Alors qu'on s'attendait à un blogpost utile et intéressant,
   on retombe de nouveau dans les même erreurs du passé. Enfin, à vous de juger.
+pageName: Blog
 
 ---
 ### MON troisième BLOGPOST
