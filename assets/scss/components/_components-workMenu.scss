@@ -1,0 +1,39 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+
+
+// -------------------------
+// WorkMenu
+// -------------------------
+.WorkMenu
+{
+    position: sticky;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    background-color: $color-grey1;
+    width: 100%;
+    list-style: none ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.WorkMenu__item {
+    width: 50%;
+    text-align: center;
+    padding: 2rem;
+}
+.WorkMenu__link
+{
+    text-decoration: none;
+    color: white;
+    width: 50%;
+    padding: 2rem;
+
+}

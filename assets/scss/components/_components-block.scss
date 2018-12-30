@@ -22,7 +22,7 @@ $size-spacing: 300px;
 {
     display: grid;
     grid-template-columns: pxtorem(60px) 1fr pxtorem(60px);
-    grid-template-rows: pxtorem(500px) auto;
+    grid-template-rows: calc(100vw - 120px) auto;
     align-content: stretch;
     justify-content: stretch;
 
@@ -123,8 +123,10 @@ $size-spacing: 300px;
 .blockContent
 {
     grid-area: 2 / 2 / 3 / 3 ;
+    padding: 5rem 0 7rem;
     @include mediaquery("small")
     {
+        padding: 1rem 0;
         grid-area: 2 / 9 / 2 / 14 ;
     }
 }
