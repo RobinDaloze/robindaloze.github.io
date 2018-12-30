@@ -1,8 +1,13 @@
-- skills: "NukeX"
-  value: "80"
-- skills: "Maya"
-  value: "80"
-- skills: "PFTrack - Mocha"
-  value: "70"
-- skills: "Javascript"
-  value: "80"
+---
+- skills: NukeX
+  value: 80
+- skills: Maya
+  value: 80
+- skills: PFTrack - Mocha
+  value: 70
+- skills: Javascript
+  value: 80
+- skills: Web (NodeJS, Jekyll, CraftCMS)
+  value: ''
+- skills: Programing (JS, PHP, Python)
+  value: ''
