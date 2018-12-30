@@ -21,5 +21,12 @@ fields:
     wysiwyg: true
     schema:
       format: markdown
+- type: text
+  name: pageName
+  label: pageName
+  hidden: true
+  config:
+    required: true
+  default: Blog
 pages:
 - _blog/un-troisième-blogpost.md

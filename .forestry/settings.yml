@@ -46,7 +46,6 @@ sections:
 - type: document
   path: _data/secondary_skills.yml
   label: Secondary Skills
-  match: "**/*"
 upload_dir: assets/img/Uploads
 public_path: assets/img/Uploads
 front_matter_path: ''
