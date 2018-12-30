@@ -1,0 +1,33 @@
+/*------------------
+-- SETTINGS
+--------------------*/
+
+
+$breakpoints: (
+	small: "(min-width:53.125em)",
+	intermediate: "(min-width:71.875em)",
+	medium: "(min-width:81.25rem)",
+    large: "(min-width:100rem)"
+) !default;
+
+
+/*------------------
+-- Mixin
+--------------------*/
+
+@mixin mediaquery($breakpoint-name)
+{
+	$breakpoint-name: unquote($breakpoint-name);
+	@if map-has-key($breakpoints, $breakpoint-name)
+	{
+		$query: map-get($breakpoints, $breakpoint-name);
+		@media all and #{$query}
+		{
+			@content;
+		}
+    }
+    @else
+	{
+		@warn "#{$breakpoint-name} is not a value defined in the 'breakpoints' map.";
+	}
+}

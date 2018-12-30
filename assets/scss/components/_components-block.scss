@@ -21,33 +21,69 @@ $size-spacing: 300px;
 .block
 {
     display: grid;
-    grid-template-columns: 1fr repeat(12, 80px) 1fr;
-    grid-template-rows: $size-spacing auto $size-spacing;
-    grid-column-gap: 20px;
+    grid-template-columns: pxtorem(60px) 1fr pxtorem(60px);
+    grid-template-rows: pxtorem(500px) auto;
     align-content: stretch;
     justify-content: stretch;
-    //margin-top: 300px;
-    margin-bottom: -$size-spacing;
+
+    @include mediaquery("small")
+    {
+        grid-template-columns: 1fr repeat(12, 60px) 1fr;
+        grid-template-rows: #{$size-spacing / 2} auto #{$size-spacing / 2};
+        grid-column-gap: 10px;
+        margin-bottom: #{-$size-spacing / 2};
+    }
+
+    @include mediaquery("medium")
+    {
+        grid-template-columns: 1fr repeat(12, 80px) 1fr;
+        grid-column-gap: 20px;
+        grid-template-rows: $size-spacing auto $size-spacing;
+        margin-bottom: -$size-spacing;
+    }
 }
 .block:first-child:before {
-    content: "";
-    height: 300px;
-    grid-column: 8/15;
-    background-image: url(/assets/img/svg/triangle-tr.svg);
-    filter: drop-shadow(6px 6px 2px rgba(0,0,0,0.25));
+    @include mediaquery("small")
+    {
+        content: "";
+        height: 150px;
+        grid-column: 8/15;
+        background-image: url(/assets/img/svg/triangle-tr.svg);
+        filter: drop-shadow(6px 6px 2px rgba(0,0,0,0.25));
+    }
+    @include mediaquery("medium")
+    {
+        height: 300px;
+    }
+    
 }
 .block:last-child:after {
-    content: "";
-    height: 300px;
-    grid-column: 8/15;
-    grid-row: 3/4;
+    @include mediaquery("small")
+    {
+        content: "";
+        height: 150px;
+        grid-column: 8/15;
+        grid-row: 3/4;
+    }
+    @include mediaquery("medium")
+    {
+        height: 300px;
+    }
+
 }
 .block:nth-child(2n).block:last-child:after  {
-    grid-column: 1/7;
-    background-image: url(/assets/img/svg/triangle-bl.svg);
+    @include mediaquery("small")
+    {
+        grid-column: 1/7;
+        background-image: url(/assets/img/svg/triangle-bl.svg);
+    }
 }
 .block:nth-child(2n+1).block:last-child:after {
-    background-image: url(/assets/img/svg/triangle-rb.svg);
+    @include mediaquery("small")
+    {
+        background-image: url(/assets/img/svg/triangle-rb.svg);
+    }
+    
 }
 .blockImg, .blockContent
 {
@@ -56,27 +92,53 @@ $size-spacing: 300px;
 }
 .blockImg
 {
-    grid-area: 2 / 1 / 3 / 8 ;
-    background: url("../assets/img/svg/triangle-bl.svg") left top no-repeat,
-                url("../assets/img/svg/block.svg") left center no-repeat,
-                url("../assets/img/svg/triangle-lt.svg") left bottom no-repeat;
-    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2-1}), 100% $size-spacing;
+    grid-area: 1 / 1 / 2 / 4 ;
+    background: url("../assets/img/svg/triangle-tr.svg") left top no-repeat,
+                url("../assets/img/svg/block.svg") center center no-repeat,
+                url("../assets/img/svg/triangle-lt.svg") right bottom no-repeat;
+    background-size: pxtorem(60px) 100%, calc(100% - 118px) 100%, pxtorem(60px) 100%;
     position: relative;
     filter: drop-shadow(6px 6px 2px rgba(0,0,0,0.25));
-    height: calc(100% + #{$size-spacing*2});
-    transform: translateY(-$size-spacing);
+    height: 100%;
+    
 
+    @include mediaquery("small")
+    {
+        background: url("../assets/img/svg/triangle-bl.svg") left top no-repeat,
+                url("../assets/img/svg/block.svg") left center no-repeat,
+                url("../assets/img/svg/triangle-lt.svg") left bottom no-repeat;
+        background-size: 100% #{$size-spacing/2}, 100% calc(100% - #{$size-spacing - 1}), 100% #{$size-spacing/2};
+        grid-area: 2 / 1 / 3 / 8 ;
+        transform: translateY(-$size-spacing/2);
+        height: calc(100% + #{$size-spacing});
+    }
 
-
+    @include mediaquery("medium")
+    {
+        background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2- 1 }), 100% $size-spacing;
+        height: calc(100% + #{$size-spacing*2});
+        transform: translateY(-$size-spacing);
+    }
 }
 .blockContent
 {
-    grid-area: 2 / 9 / 2 / 14 ;
+    grid-area: 2 / 2 / 3 / 3 ;
+    @include mediaquery("small")
+    {
+        grid-area: 2 / 9 / 2 / 14 ;
+    }
 }
 .blockImg__link
 {
-    grid-area: 2 / 2 / 3 / 7 ;
+    grid-area: 1 / 2 / 2 / 3 ;
     z-index: 10;
+    margin: auto;
+    @include mediaquery("small")
+    {
+        grid-area: 2 / 2 / 3 / 7 ;
+        z-index: 10;
+        margin: 0;
+    }
 }
 .blockImg__img
 {
@@ -85,19 +147,32 @@ $size-spacing: 300px;
 
 .block:nth-child(2n) .blockImg
 {
-    grid-area: 2/ 8 / 3 / 15 ;
-    background: url("../assets/img/svg/triangle-rb.svg") right top no-repeat,
-                url("../assets/img/svg/block.svg") left center no-repeat,
-                url("../assets/img/svg/triangle-tr.svg") right bottom no-repeat;
-    background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2-1}), 100% $size-spacing;
+    @include mediaquery("small")
+    {
+        grid-area: 2/ 8 / 3 / 15 ;
+        background: url("../assets/img/svg/triangle-rb.svg") right top no-repeat,
+                    url("../assets/img/svg/block.svg") left center no-repeat,
+                    url("../assets/img/svg/triangle-tr.svg") right bottom no-repeat;
+        background-size: 100% #{$size-spacing/2}, 100% calc(100% - #{$size-spacing - 1}), 100% #{$size-spacing/2};
+    }
+    @include mediaquery("medium")
+    {
+        background-size: 100% $size-spacing, 100% calc(100% - #{$size-spacing*2 - 1}), 100% $size-spacing;
+    }
 }
 .block:nth-child(2n) .blockContent
 {
-    grid-area: 2 / 2 / 3 / 7 ;
+    @include mediaquery("small")
+    {
+        grid-area: 2 / 2 / 3 / 7 ;
+    }
 }
-.block:nth-child(2n) .blockImg__link
+    .block:nth-child(2n) .blockImg__link
 {
-    grid-area: 2 / 9 / 3 / 14 ;
+    @include mediaquery("small")
+    {
+        grid-area: 2 / 9 / 3 / 14 ;
+    }
 }
 .block:last-child
 {
