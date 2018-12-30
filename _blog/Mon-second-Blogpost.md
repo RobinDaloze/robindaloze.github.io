@@ -7,7 +7,7 @@ summary: Un second blogpost. De nouveau malheureusement, le contenu n'est pas te
 pageName: Blog
 
 ---
-### Un Second blogpost ?
+### 
 
 #### En tout cas, pas plus utile que le premier
 
