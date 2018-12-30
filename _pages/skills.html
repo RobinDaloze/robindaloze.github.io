@@ -11,7 +11,7 @@ secondary_skills: Secondary Skills
     <li class="block">
         <div class="blockImg blockImg--skills"></div>
         <div class="blockContent blockContent--skills">
-            <h3>Experience</h3>
+            <h3>{{page.experience_title}}</h3>
             {% for item in site.data.experience %}
                 {% if forloop.first %}<ul class="skills__list">{% endif %}
                 <li class="skills__item">
@@ -26,10 +26,10 @@ secondary_skills: Secondary Skills
     <li class="block">
         <div class="blockImg blockImg--skills"></div>
         <div class="blockContent blockContent--skills">
-            <h3>Skills</h3>
+            <h3>{{page.skills_title}}</h3>
             {% for item in site.data.skills %}
                 {% if forloop.first %}<ul class="skills__list">{% endif %}
-                <li class="skills__item skills__value--{{item.value}}">
+                <li class="skills__item">
                     <h4 class="skills__title introText">{{item.skills}}</h4>
                 </li>
                 {% if forloop.last %}</ul>{% endif %}
@@ -40,10 +40,10 @@ secondary_skills: Secondary Skills
     <li class="block">
         <div class="blockImg blockImg--skills"></div>
         <div class="blockContent blockContent--skills">
-            <h3>Skills</h3>
+            <h3>{{page.secondary_skills}}</h3>
             {% for item in site.data.secondary_skills %}
                 {% if forloop.first %}<ul class="skills__list">{% endif %}
-                <li class="skills__item skills__value--{{item.value}}">
+                <li class="skills__item">
                     <h4 class="skills__title introText">{{item.skills}}</h4>
                 </li>
                 {% if forloop.last %}</ul>{% endif %}
