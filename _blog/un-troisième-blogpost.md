@@ -3,11 +3,9 @@ date: 2018-12-30 21:00:00 +0000
 title: Un troisieme blogpost
 summary: La déception. Alors qu'on s'attendait à un blogpost utile et intéressant,
   on retombe de nouveau dans les même erreurs du passé. Enfin, à vous de juger.
-pageName: Blog
+pageName: ''
 
 ---
-### MON troisième BLOGPOST
-
 Salut ! ceci est mon premier blogpost. Il ne parler de strictement rien d'intéressant. Enfin, si peut-être, mais pour ça, il faut voir le contenu malheureusement.
 
 ### UN troisième BLOGPOST
