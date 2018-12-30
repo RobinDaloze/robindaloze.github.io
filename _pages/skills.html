@@ -34,25 +34,18 @@ pageName: Skills
         </div>
         
     </li>
-</ul>
-    
-
-
-
-
-
-    {% for item in page.block %}
-    {% if forloop.first %}<ul class="blockContainer">{% endif %}
     <li class="block">
-        <div class="blockImg">
+        <div class="blockImg blockImg--skills"></div>
+        <div class="blockContent blockContent--skills">
+            <h3>Skills</h3>
+            {% for item in site.data.secondary_skills %}
+                {% if forloop.first %}<ul class="skills__list">{% endif %}
+                <li class="skills__item skills__value--{{item.value}}">
+                    <h4 class="skills__title introText">{{item.skills}}</h4>
+                </li>
+                {% if forloop.last %}</ul>{% endif %}
+            {% endfor %}
         </div>
-        <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
-        <div class="blockContent">
-            <h3>{{item.title}}</h3>
-            <p class="introText">{{item.intro}}</p>
-            <p class="mainText">{{item.text}}</p>
-            <a class="button_link" href="#">{{item.value_of_the_button}}</a>
-        </div>
+        
     </li>
-    {% if forloop.last %}</ul>{% endif %}
-{% endfor %}
+</ul>

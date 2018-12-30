@@ -3,21 +3,6 @@ layout: base
 permalink: "./work/index.html"
 pageName: Work
 title: Work
-work_asset:
-- template: work-asset
-  asset: "/assets/img/Uploads/HeaderHomePage.PNG"
-  asset_item:
-  - template: description-work-asset
-    title: TFE 3ème bac
-    description: This work combine many technologies like, in 3D, paint effect, mash,
-      nParticules, Vray, Speedtree and the compositing is made in Nuke
-  - template: image-work-asset
-    image: "/assets/img/Uploads/HeaderHomePage.PNG"
-  - template: image-work-asset
-    image: "/assets/img/Uploads/HeaderHomePage.PNG"
-  - template: description-work-asset
-    title: Test
-    description: coucou
 description: |-
   Here you can see my work. Many of them are created at school or for school. Some are just for an exam, others are for jury or internship. Others again are works created only for me.
   There are work on compositing and/or 3D or work on web, like Threejs, nodejs, and much more
@@ -55,11 +40,11 @@ programing-web_work_asset:
 </div>
 
 <ul class="WorkMenu">
-    <li class="WorkMenu__item"><a class="WorkMenu__link" href="#top">Compositing / 3D</a></li>
-    <li class="WorkMenu__item"><a class="WorkMenu__link" href="">Programmation / Web</a></li>
+    <li class="WorkMenu__item"><a class="WorkMenu__link WorkMenu__link--3d" href="#3d">Compositing / 3D</a></li>
+    <li class="WorkMenu__item"><a class="WorkMenu__link WorkMenu__link--web" href="#web">Programmation / Web</a></li>
 </ul>
-{% for item in page.work_asset %}
-    {% if forloop.first %}<ul class="workAsset__container">{% endif %}
+{% for item in page.compo3d_work_asset %}
+    {% if forloop.first %}<ul id="3d" class="workAsset__container">{% endif %}
 
     {% for i in item.asset_item %}
         {% if i.template == "description-work-asset" %}
@@ -70,7 +55,27 @@ programing-web_work_asset:
         </div>
         {% endif %}
         {% if i.template == "image-work-asset" %}
-            <img class="workAsset__img" src="{{i.image}}" alt="Oups, asset non disponible">
+            <img class="workAsset__img" src="/{{i.image}}" alt="Oups, asset non disponible">
+        {% endif %}
+    {% endfor %}
+    
+    {% if forloop.last %}</ul>{% endif %}
+    
+{% endfor %}
+
+{% for item in page.programing-web_work_asset %}
+    {% if forloop.first %}<ul id="web" class="workAsset__container">{% endif %}
+
+    {% for i in item.asset_item %}
+        {% if i.template == "description-work-asset" %}
+        
+        <div class="workAsset__textContainer">
+            <h3 class="workAsset__title">{{i.title}}</h3>
+            <p class="workAsset__description">{{i.description}}</p>
+        </div>
+        {% endif %}
+        {% if i.template == "image-work-asset" %}
+            <img class="workAsset__img" src="/{{i.image}}" alt="Oups, asset non disponible">
         {% endif %}
     {% endfor %}
     

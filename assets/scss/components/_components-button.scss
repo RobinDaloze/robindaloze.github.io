@@ -10,6 +10,8 @@ $color-accent1: "red" !default;
 //  BUTTON
 // -------------------------
 .button_link{
+    display: inline-block;
+    margin: pxtorem(12px) 0;
     text-decoration: none;
     color: $color-accent1;
     font: 500 1rem/1 $fontstack-secondary;

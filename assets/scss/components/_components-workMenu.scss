@@ -32,8 +32,28 @@ $color-grey1: #1A1412 !default;
 .WorkMenu__link
 {
     text-decoration: none;
+    position: relative;
     color: white;
     width: 50%;
     padding: 2rem;
-
+}
+.WorkMenu__link--3d:before
+{
+    content: "";
+    height: pxtorem(32px);
+    width: pxtorem(32px);
+    position: absolute;
+    left: pxtorem(-6px);
+    top: 1.5rem;
+    background: url("/assets/img/svg/cube.svg") 0 0 no-repeat;
+}
+.WorkMenu__link--web:before
+{
+    content: "";
+    height: pxtorem(32px);
+    width: pxtorem(32px);
+    position: absolute;
+    left: pxtorem(-6px);
+    top: 1.5rem;
+    background: url("/assets/img/svg/web.svg") 0 0 no-repeat;
 }
