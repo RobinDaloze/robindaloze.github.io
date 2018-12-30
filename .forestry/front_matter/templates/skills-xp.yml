@@ -1,6 +1,6 @@
 ---
 label: Skills & XP
-hide_body: true
+hide_body: false
 is_partial: false
 fields:
 - type: text
@@ -11,3 +11,9 @@ fields:
   name: skills_title
   label: Skills Title
   description: Title of the second block
+- type: text
+  name: secondary_skills
+  label: Secondary skills
+  description: Title of the third block
+  config:
+    required: true
