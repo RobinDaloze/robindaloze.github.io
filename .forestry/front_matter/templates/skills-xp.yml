@@ -17,3 +17,5 @@ fields:
   description: Title of the third block
   config:
     required: true
+pages:
+- _pages/skills.html
