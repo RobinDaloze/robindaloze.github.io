@@ -51,5 +51,6 @@ fields:
     max: '9'
   template_types:
   - contact-link
+- type: text
 pages:
 - _includes/footer.html
