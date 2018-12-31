@@ -29,6 +29,13 @@ fields:
       format: html-blocks
   label: Text
   name: text-contact
+- type: blocks
+  name: link
+  label: Link contact
+  config:
+    max: '7'
+  template_types:
+  - contact-link
 - type: text
   name: navigation
   label: Navigation
@@ -38,7 +45,9 @@ fields:
   label: Social Media
   description: 'Fourth column (size : 2)'
 - type: blocks
-  name: link
-  label: Link contact
+  name: social_media_link
+  label: Social Media Link
   config:
-    max: '7'
+    max: '9'
+  template_types:
+  - contact-link
