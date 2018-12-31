@@ -18,7 +18,7 @@ fields:
   config:
     required: true
 - type: include
-  hidden: true
+  hidden: false
   label: Footer
   name: footer
   template: footer
