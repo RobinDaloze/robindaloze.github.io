@@ -1,33 +1,7 @@
----
-showreel: Showreel
-text: "<p>You can contact me to have the full showreel  </p>"
-contact: Contact
-text-contact: "<p>You can contact me with  </p>"
-link:
-- template: contact-link
-  link: https://www.linkedin.com/in/robindaloze/
-  title: LinkedIn
-- template: contact-link
-  title: Mail
-  link: mailto:Meuh@gmail.com
-navigation: Navigation
-social_media: Social Media
-social_media_link:
-- template: contact-link
-  title: Mail
-  link: Mailto:Meuh@gmail.com
-- template: contact-link
-  title: Facebook
-  link: facebook.com
-- template: contact-link
-  title: IMDB
-  link: https://www.imdb.com/name/nm10197862/?ref_=fn_al_nm_1
-
----
 <div class="footer">
     <div class="footerShowreel">
-        <h4>Showreel</h4>
-        <p class="footerText mainText">You can contact me to have the full showreel</p>
+        <h4>{{site.data.footer.showreel}}</h4>
+        <p class="footerText mainText">{{site.data.footer.text}}</p>
         <video class="footerShowreel__video" width="280" height="158" autoplay loop>
                 <source src="/assets/video/VFX-Breakdown.webm" type="video/webm">
                 <source src="/assets/video/VFX Breakdown.mp4" type="video/mp4">
@@ -35,19 +9,18 @@ social_media_link:
               </video>
     </div>
     <div class="footerContact">
-        <h4>Contact</h4>
-        <p class="footerText mainText">You can contact me with</p>
-        <ul class="footerContent__list">
-            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">
-                LikedIn
-            </a></li>
-            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">
-                gmail.com
-            </a></li>
-        </ul>
+        <h4>{{site.data.footer.contact}}</h4>
+        <p class="footerText mainText">{{site.data.footer.text-contact}}</p>
+        {% for item in site.data.footer.link %}
+            {% if forloop.first %}<ul class="footerContent__list">{% endif %}
+            <li class="footerContent__item"><a class="footerContent__list mainText" href="{{item.link}}">
+                    {{item.title}}
+                </a></li>
+            {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
     </div>
     <div class="footerNav">
-        <h4>Navigation</h4>
+        <h4>{{site.data.footer.navigation}}</h4>
         {% for item in site.data.mainnav %}
             {% if forloop.first %}<ul class="footerContent__list">{% endif %}
             <li class="footerContent__item">
@@ -58,13 +31,12 @@ social_media_link:
         {% endfor %}
     </div>
     <div class="footerSocial">
-        <h4>Social Media</h4>
-        <ul class="footerContent__list">
-            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">Linked In</a></li>
-            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">Mail</a></li>
-            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">Facebook</a></li>
-            <li class="footerContent__item"><a class="footerContent__list mainText" href="#">IMDB</a></li>
-        </ul>
+        <h4>{{site.data.footer.social_media}}</h4>
+        {% for item in site.data.footer.social_media_link %}
+            {% if forloop.first %}<ul class="footerContent__list">{% endif %}
+                <li class="footerContent__item"><a class="footerContent__list mainText" href="{{item.link}}">{{item.title}}</a></li>
+            {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
     </div>
     
 
