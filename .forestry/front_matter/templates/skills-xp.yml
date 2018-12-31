@@ -17,5 +17,10 @@ fields:
   description: Title of the third block
   config:
     required: true
+- type: include
+  hidden: true
+  label: Footer
+  name: footer
+  template: footer
 pages:
 - _pages/skills.html
