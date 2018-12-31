@@ -3,21 +3,16 @@ text: "You can contact me to have the full showreel"
 contact: Contact
 text-contact: "You can contact me with"
 link:
-- template: contact-link
-  link: https://www.linkedin.com/in/robindaloze/
+- link: https://www.linkedin.com/in/robindaloze/
   title: LinkedIn
-- template: contact-link
-  title: Mail
+- title: Mail
   link: mailto:Meuh@gmail.com
 navigation: Navigation
 social_media: Social Media
 social_media_link:
-- template: contact-link
-  title: Mail
+- title: Mail
   link: Mailto:Meuh@gmail.com
-- template: contact-link
-  title: Facebook
+- title: Facebook
   link: facebook.com
-- template: contact-link
-  title: IMDB
+- title: IMDB
   link: https://www.imdb.com/name/nm10197862/?ref_=fn_al_nm_1
