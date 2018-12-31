@@ -13,7 +13,7 @@ $color-grey1: #1A1412 !default;
 
 .blogList
 {
-    width: pxtorem(1180px);
+    width: 100%;
     list-style: none;
     padding: 0;
     margin: 0 auto;
@@ -22,31 +22,56 @@ $color-grey1: #1A1412 !default;
 {
 
     width: 100%;
-    grid-column: 4/10;
     display: grid;
-    grid-template-columns: repeat(12, 80px);
-    grid-column-gap:20px;
+    grid-template-columns: 60px 1fr 60px;
     align-items: baseline;
     margin: 3rem 0;
+
+    @include mediaquery("small")
+    {
+        grid-template-columns: 1fr repeat(12, 60px) 1fr;
+        grid-column-gap:10px;
+    }
+    @include mediaquery("medium")
+    {
+        grid-template-columns: 1fr repeat(12, 80px) 1fr;
+        grid-column-gap:20px;
+    }
 }
 .blogList__date
 {
-    grid-column: 1/span 2;
+    grid-column: 2/span 1;
     color: $color-accent1;
     font-size: pxtorem(16px);
     margin: 0;
+    @include mediaquery("small")
+    {
+        grid-column: 2/span 2;
+    }
 }
 .blogList__title
 {
-    grid-column: 3 / span 5;
+    grid-column: 2 / span 1;
     text-decoration: none;
     color: black;
+    @include mediaquery("small")
+    {
+        grid-column: 4/span 5;
+    }
 }
 .blogList__summary {
-    grid-column: 3 / span 10;
+    grid-column: 2 / span 1;
+    @include mediaquery("small")
+    {
+        grid-column: 4/span 10;
+    }
 }
 .blogList__readmore {
-    grid-column: 3 / span 2;
+    grid-column: 2 / span 1;
     color: $color-accent1;
     text-decoration: none;
+    @include mediaquery("small")
+    {
+        grid-column: 4/span 2;
+    }
 }

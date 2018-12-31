@@ -12,9 +12,14 @@ $color-grey1: #1A1412 !default;
 ---------------------------*/
 .blogpost
 {
-    width: pxtorem(780px);
+    max-width: pxtorem(780px);
     margin: pxtorem(60px) auto;
     position: relative;
+    padding: 0 pxtorem(60px);
+    @include mediaquery("medium")
+    {
+        padding: 0
+    }
 }
 .blogpost p
 {
@@ -28,6 +33,10 @@ $color-grey1: #1A1412 !default;
     font-size: pxtorem(16px);
     margin: 0;
     color: $color-accent1;
-    position: absolute;
-    left: -200px;
+    
+    @include mediaquery("medium")
+    {
+        position: absolute;
+        left: -200px;
+    }
 }

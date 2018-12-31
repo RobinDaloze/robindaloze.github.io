@@ -14,20 +14,32 @@ $color-grey1: #1A1412 !default;
 {
     padding: pxtorem(114px) 0 0;
     display: grid;
-    grid-template-columns: 1fr repeat(12, 80px) 1fr;
+    grid-template-columns: 1fr 3fr 1fr;
     grid-column-gap: 20px;
     grid-row-gap: 20px;
     width: 100%;
+    @include mediaquery("medium")
+    {
+        grid-template-columns: 1fr repeat(12, 80px) 1fr;
+    }
 }
 .workAsset__textContainer
 {
-    grid-column: 5/9;
+    grid-column: 2/3;
     margin-bottom : pxtorem(60px);
+    @include mediaquery("medium")
+    {
+        grid-column: 5/9;
+    }
 }
 .workAsset__img
 {
-    grid-column: 1/15;
+    grid-column: 1/4;
     max-width: 100%;
     margin: 0 auto;
+    @include mediaquery("medium")
+    {
+        grid-column: 1/15;
+    }
     
 }

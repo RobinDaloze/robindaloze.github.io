@@ -9,7 +9,7 @@
     "build:css": "npm-run-all build:css-compressed build:css-expanded",
     "watch:css": "onchange assets/scss/**/* -- npm run build:css",
     "build:jekyll": "jekyll build",
-    "watch:jekyll": "onchange \"_data/**/*\" \"_includes/**/*\" \"_layouts/**/*\" \"_pages/**/*\" \"_config.yml\" -- jekyll build",
+    "watch:jekyll": "onchange \"_data/**/*\" \"_blog/**/*\" \"_includes/**/*\" \"_layouts/**/*\" \"_pages/**/*\" \"_config.yml\" -- jekyll build",
     "watch:js": "onchange _script/**/* -- npm run build:js",
     "build:js": "browserify _script/main.js -o _site/js/dist.js",
     "build:img-bm": "imagemin assets/img/svg/* --out-dir=_site/assets/img/svg",

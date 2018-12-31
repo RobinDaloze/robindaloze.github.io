@@ -36,6 +36,10 @@ $size-spacing: 300px;
         grid-column-gap: 20px;
     }
 }
+.footerShowreel__video
+{
+    max-width: 100%;
+}
 .footerShowreel
 {
     grid-column: 2/ span 2;
