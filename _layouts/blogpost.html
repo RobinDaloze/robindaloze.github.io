@@ -3,7 +3,7 @@ layout: base
 pageName: Blog
 ---
 <div class="blogpost">
-    <h5 class="blogpost__date">{{page.date | date:"%m/%d/%Y" }}</h5>
+    <h5 class="blogpost__date">{{page.date | date:"%d/%m/%Y" }}</h5>
     <h3>{{page.title}}</h3>
     <p>{{page.summary}}</p>
     {{content}}
