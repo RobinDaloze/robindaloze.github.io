@@ -44,7 +44,6 @@ sections:
 - type: document
   path: _data/footer.yml
   label: Footer
-  match: "**/*"
 upload_dir: assets/img/Uploads
 public_path: assets/img/Uploads
 front_matter_path: ''
