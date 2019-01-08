@@ -3,7 +3,7 @@ module Jekyll
   
       def render(context)
         url = super
-        @text = "<iframe width=\"100%\" height=\"100%\" src=\""+url+"\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>"
+        @text = '<iframe src="'+ url +'" width="100%" height="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>'
         "#{@text}"
       end
     end
