@@ -1,0 +1,27 @@
+---
+label: WorkItem
+hide_body: false
+is_partial: false
+fields:
+- type: text
+  label: Title
+  name: title
+  config:
+    required: true
+- type: datetime
+  name: date
+  label: Date
+  description: Date of publish
+  hidden: false
+  config:
+    required: true
+- type: textarea
+  name: summary
+  label: Summary
+  description: This text appear in card
+  config:
+    required: true
+    wysiwyg: false
+    schema:
+      format: markdown
+  hidden: false
