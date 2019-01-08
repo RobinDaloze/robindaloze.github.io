@@ -18,11 +18,15 @@ sections:
 - type: document
   path: _pages/contact.html
   label: Contact
+- type: heading
+  label: Collections
 - type: directory
   path: _Work
   label: Work
   create: documents
   match: "**/*"
+  templates:
+  - workitem
 - type: directory
   path: _blog
   label: Blog
