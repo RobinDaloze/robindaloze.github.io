@@ -30,3 +30,4 @@ fields:
   default: Blog
 pages:
 - _blog/un-troisième-blogpost.md
+- _blog/blogpost-with-image.md
