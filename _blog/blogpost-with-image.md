@@ -15,7 +15,7 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atqu
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!
 
-![](..\\assets\\img\\Uploads/Programing.png)
+![](../assets/img/Uploads/Programing.png)
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!
 
@@ -23,6 +23,6 @@ Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atqu
 
 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro
 
-![](..\\assets\\img\\Uploads/HeaderHomePage.PNG)
+![](../assets/img/Uploads/HeaderHomePage.PNG)
 
 quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus in atque laborum ducimus exercitationem aperiam, autem perferendis inventore corporis maiores ullam porro quidem ex repudiandae, voluptates sequi quod dignissimos. Veniam!
