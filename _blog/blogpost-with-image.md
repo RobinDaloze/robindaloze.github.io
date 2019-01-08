@@ -3,7 +3,6 @@ pageName: Blog
 date: 2019-01-02 23:00:00 +0000
 title: Blogpost with image
 summary: Un quatrième blogpost, incroyable !
-published: false
 
 ---
 #### En tout cas, pas plus utile que le premier
