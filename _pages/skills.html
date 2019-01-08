@@ -30,7 +30,7 @@ secondary_skills: Secondary Skills
             {% for item in site.data.skills %}
                 {% if forloop.first %}<ul class="skills__list">{% endif %}
                 <li class="skills__item">
-                    <h4 class="skills__title introText">{{item.skills}}</h4>
+                    <h4 class="skills__black introText">{{item.skills}}</h4>
                 </li>
                 {% if forloop.last %}</ul>{% endif %}
             {% endfor %}
@@ -44,7 +44,7 @@ secondary_skills: Secondary Skills
             {% for item in site.data.secondary_skills %}
                 {% if forloop.first %}<ul class="skills__list">{% endif %}
                 <li class="skills__item">
-                    <h4 class="skills__title introText">{{item.skills}}</h4>
+                    <h4 class="skills__black introText">{{item.skills}}</h4>
                 </li>
                 {% if forloop.last %}</ul>{% endif %}
             {% endfor %}
