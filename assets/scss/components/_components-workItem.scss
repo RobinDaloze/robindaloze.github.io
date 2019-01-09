@@ -1,0 +1,34 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+
+
+/*-------------------------
+-- BLOGPOST
+---------------------------*/
+.workItem
+{
+    max-width: pxtorem(780px);
+    margin: pxtorem(60px) auto;
+    position: relative;
+    padding: 0 pxtorem(60px);
+    @include mediaquery("medium")
+    {
+        padding: 0
+    }
+}
+.workItem p
+{
+    font:400 pxtorem(16px) $fontstack-main;
+    line-height:pxtorem(24px);
+    margin: pxtorem(18px) 0;
+    padding: 0;
+}
+.workItem img
+{
+    max-width: 100%;
+}

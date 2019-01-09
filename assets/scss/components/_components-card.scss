@@ -1,0 +1,112 @@
+// ------------------------
+// Settings
+// ------------------------
+$fontstack-secondary:("Montserrat", "Arial", sans-serif) !default;
+$fontstack-main:("Raleway", "Arial", sans-serif) !default;
+$color-accent1: "red" !default;
+$color-grey1: #1A1412 !default;
+$color-accent2: #EDAB99 !default;
+
+// -------------------------
+// Blocks
+// -------------------------
+.cardContainer
+{
+    background-color: $color-grey1;
+    width: 100%;
+}
+.card
+{
+    
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: pxtorem(60px) 1fr pxtorem(60px);
+    justify-content: stretch;
+
+    @include mediaquery("small")
+    {
+        grid-template-columns: 1fr repeat(12, 60px) 1fr;
+        grid-column-gap: 10px;
+    }
+
+    @include mediaquery("medium")
+    {
+        width: pxtorem(1180px);
+        margin: auto;
+        grid-template-columns: repeat(12, 80px);
+        grid-auto-rows: 60px;
+        grid-gap: 20px;
+        
+    }
+}
+.card__item
+{
+    grid-column-start: auto;
+    grid-column-end: span 3;
+    grid-row-start: auto;
+    grid-row-end: span 7;
+    background-color: white;
+    transition: .5s transform ease;
+}
+.card__item:nth-child(1)
+{   
+    grid-row-start: 4;
+}
+.card__item:nth-child(2)
+{
+    grid-row-start: 3;
+}
+.card__item:nth-child(3)
+{
+    grid-row-start: 2;
+}
+.card__item:nth-child(4)
+{
+    grid-row-start: 1;
+}
+.card__item:hover
+{
+    transform: scale(1.05)
+}
+.card__item a
+{
+    height: 100%;
+    width: 100%;
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+.card__content
+{
+    padding: 12px;
+    position: relative;
+    box-sizing: border-box;
+    height:calc(100% - 157.5px);
+}
+.card__img
+{
+    height: pxtorem(157.5px);
+    width: 100%;
+}
+.card__title
+{
+    font: 800 1.875rem $fontstack-secondary;
+    line-height: 2.25rem;
+    text-transform: uppercase;
+    padding: 0;
+    color: black;
+    text-decoration: none;
+}
+.card__link
+{
+    position: absolute;
+    bottom: pxtorem(12px);
+    right: pxtorem(18px);
+    color: $color-accent1;
+    text-decoration: none;
+    padding: 0 pxtorem(6px);
+
+
+}

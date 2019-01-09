@@ -39,6 +39,41 @@ programing-web_work_asset:
     </div>
 </div>
 
+
+{% assign allWork = site.work %}
+{{ allwork }}
+<div class="cardContainer">
+{% for item in allWork %}
+    {% if forloop.first %}<ul class="card workList">{% endif %}
+        <li class="card__item workList__item">
+            <a href="{{item.url}}">
+                <img class="card__img" src="/assets/img/Uploads/Programing.png" alt="">
+                <div class="card__content">
+                    <h3 class="card__title workList__title">{{ item.title }}</h3>
+                    <p class="card__texte mainText workList__summary">{{item.summary}}</p>
+                    <p class="card__link workList__readmore" href="{{item.url}}">Lire la suite</p>
+                </div>
+             </a>
+        </li>
+    {% if forloop.last %}</ul>{% endif %}
+    
+{% endfor %}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% comment %}
 <ul class="WorkMenu">
     <li class="WorkMenu__item"><a class="WorkMenu__link WorkMenu__link--3d" href="#3d">Compositing / 3D</a></li>
     <li class="WorkMenu__item"><a class="WorkMenu__link WorkMenu__link--web" href="#web">Programmation / Web</a></li>
@@ -82,3 +117,4 @@ programing-web_work_asset:
     {% if forloop.last %}</ul>{% endif %}
     
 {% endfor %}
+{% endcomment %}

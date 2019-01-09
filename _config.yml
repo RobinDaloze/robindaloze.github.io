@@ -42,6 +42,8 @@ keep_files:
 collections:
   blog:
     output: true
+  work:
+    output: true
     
 #default
 defaults:
@@ -50,5 +52,12 @@ defaults:
     values:
       layout: blogpost
       permalink: blogpost/:title/
-
+      pageName: Blog
+  - scope:
+     type: work
+    values:
+      layout: workItem
+      permalink: work/:title/
+      pageName: Work
+  
 
