@@ -21,7 +21,7 @@ sections:
 - type: heading
   label: Collections
 - type: directory
-  path: _Work
+  path: _work
   label: Work
   create: documents
   match: "**/*"
