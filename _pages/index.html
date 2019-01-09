@@ -61,12 +61,12 @@ image_header: assets/img/Uploads/HeaderHomePage.PNG
     <li class="block">
         <div class="blockImg">
         </div>
-        <canvas class="blockImg__img blockImg__link ImageNoise" image="{{item.image}}" width="500" height="500"></canvas>
+        <a class="blockImg__img blockImg__link" href="/work"><canvas class="blockImg__img blockImg__link ImageNoise" image="{{item.image}}" width="500" height="500"></canvas></a>
         <div class="blockContent">
             <h3>{{item.title}}</h3>
             <p class="introText">{{item.intro}}</p>
             <p class="mainText">{{item.text}}</p>
-            <a class="button_link" href="#"><p>{{item.value_of_the_button}}</p></a>
+            {% if item.toggle_button == true %}<a class="button_link" href="/work"><p>{{item.value_of_the_button}}</p></a>{% endif %}
         </div>
     </li>
     {% if forloop.last %}</ul>{% endif %}

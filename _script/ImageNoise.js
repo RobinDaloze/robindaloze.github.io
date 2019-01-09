@@ -10,10 +10,12 @@ module.exports = {
     function init() {
       window.requestAnimationFrame(draw);
     }
+    var seed = Math.random();
     var over = false;
     var timeOffset = 0.005;
     var time = 0;
     var src = canvas.getAttribute("image");
+
     function draw() {
       var SMOOTHNESS = 15,
         INTENSITY = 9,
@@ -23,9 +25,8 @@ module.exports = {
         MAXSPEED = 0.015,
         timeSinus = 0;
 
-      var now = Date.now();
       var SimplexNoise = require("simplex-noise"),
-        simplex = new SimplexNoise(0.2);
+        simplex = new SimplexNoise(seed);
 
       //console.log("dqsd");
       // Grab the Canvas and Drawing Context

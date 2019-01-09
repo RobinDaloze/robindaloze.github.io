@@ -6,25 +6,6 @@ title: Work
 description: |-
   Here you can see my work. Many of them are created at school or for school. Some are just for an exam, others are for jury or internship. Others again are works created only for me.
   There are work on compositing and/or 3D or work on web, like Threejs, nodejs, and much more
-compo3d_work_asset:
-- template: work-asset
-  asset_item:
-  - template: description-work-asset
-    title: TFE 3ÈME BAC
-    description: This work combine many technologies like, in 3D, paint effect, mash,
-      nParticules, Vray, Speedtree and the compositing is made in Nuke
-  - template: image-work-asset
-    image: assets/img/Uploads/HeaderHomePage.PNG
-  - template: image-work-asset
-    image: assets/img/Uploads/HeaderHomePage.PNG
-programing-web_work_asset:
-- template: work-asset
-  asset_item:
-  - template: description-work-asset
-    title: Particule in ThreeJS
-    description: Some Particules
-  - template: image-work-asset
-    image: assets/img/Uploads/Programing.png
 image_presentation: "/assets/img/Uploads/HeaderHomePage.PNG"
 
 ---
@@ -32,7 +13,7 @@ image_presentation: "/assets/img/Uploads/HeaderHomePage.PNG"
     <div class="block">
         <div class="blockImg">
         </div>
-        <a class="blockImg__link" href="#"><img class="blockImg__img" src="../assets/img/test.png" alt=""></a>
+        <a class="blockImg__link" href="#"><canvas class="blockImg__img blockImg__link ImageNoise" image="{{page.image_presentation}}" width="500" height="500"></canvas></a>
         <div class="blockContent">
             <h3>{{page.title}}</h3>
             <p class="mainText">{{page.description}}</p>
@@ -42,7 +23,6 @@ image_presentation: "/assets/img/Uploads/HeaderHomePage.PNG"
 
 
 {% assign allWork = site.work %}
-{{ allwork }}
 <div class="cardContainer">
 {% for item in allWork %}
     {% if forloop.first %}<ul class="card workList">{% endif %}

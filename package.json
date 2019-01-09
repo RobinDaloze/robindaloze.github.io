@@ -12,9 +12,11 @@
     "watch:jekyll": "onchange \"_plugins/**/*\" \"_data/**/*\" \"_blog/**/*\" \"_work/**/*\" \"_includes/**/*\" \"_layouts/**/*\" \"_pages/**/*\" \"_config.yml\" -- jekyll build",
     "watch:js": "onchange _script/**/* -- npm run build:js",
     "build:js": "browserify _script/main.js -o _site/js/dist.js",
-    "build:img-bm": "imagemin assets/img/svg/* --out-dir=_site/assets/img/svg",
+    "build:img-bm:resize": "node npm_scripts/ImageResize.js ",
+    "build:img-bm:imagemin": "imagemin assets/img/svg/* --out-dir=_site/assets/img/svg ",
+    "build:img-bm": "npm-run-all --serial build:img-bm:imagemin build:img-bm:resize ",
     "build:img-svg": "imagemin assets/img/Uploads/* --out-dir=_site/assets/img/Uploads",
-    "del:img": "del-cli \"_site/assets/img/Uploads\"",
+    "del:img": "del-cli \"_site/assets/img/Uploads\" \"_site/assets/img/ResizedImages\"",
     "build:img": "npm-run-all --serial del:img build:img-svg build:img-bm",
     "watch:img": "onchange assets/img/Uploads/**/* -- npm run build:img",
     "serve": "browser-sync start --server _site/ --file _site",
@@ -31,11 +33,14 @@
     "browser-sync": "^2.26.3",
     "browserify": "^16.2.3",
     "del-cli": "^1.1.0",
+    "fs": "0.0.1-security",
     "glob": "^7.1.3",
     "imagemin-cli": "^4.0.0",
     "node-sass": "^4.11.0",
     "npm-run-all": "^4.1.5",
     "onchange": "^5.2.0",
-    "postcss-cli": "^6.1.0"
+    "path": "^0.12.7",
+    "postcss-cli": "^6.1.0",
+    "sharp": "^0.21.1"
   }
 }
