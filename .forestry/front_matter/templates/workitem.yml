@@ -3,6 +3,9 @@ label: WorkItem
 hide_body: false
 is_partial: false
 fields:
+- type: file
+  name: top_image
+  label: Top Image
 - type: text
   label: Title
   name: title
