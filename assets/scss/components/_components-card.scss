@@ -50,7 +50,7 @@ $color-accent2: #EDAB99 !default;
     background-color: white;
     transition: .5s transform ease;
 }
-.card__item:nth-child(1)
+/*.card__item:nth-child(1)
 {   
     grid-row-start: 4;
 }
@@ -65,7 +65,7 @@ $color-accent2: #EDAB99 !default;
 .card__item:nth-child(4)
 {
     grid-row-start: 1;
-}
+}*/
 .card__item:hover
 {
     transform: scale(1.05)
