@@ -15,17 +15,8 @@ fields:
   name: description
   label: Description
   description: Description of the page
-- type: blocks
-  template_types:
-  - work-asset
-  config:
-    min: ''
-  label: Compo/3D Work Asset
-  name: compo3d_work_asset
-- type: blocks
-  name: programing-web_work_asset
-  label: Programing/Web Work Asset
-  template_types:
-  - work-asset
+- type: file
+  name: image_presentation
+  label: Image Presentation
 pages:
 - _pages/work.html
